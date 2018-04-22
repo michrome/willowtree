@@ -1,0 +1,12 @@
+---
+:id: 1Vsa5aI3Ty2SSGoKYKE4gA
+:_meta:
+  :content_type_id: post
+  :updated_at: '2018-04-04T21:49:11+00:00'
+  :created_at: '2018-04-04T21:49:11+00:00'
+  :id: 1Vsa5aI3Ty2SSGoKYKE4gA
+:title: This project uses JavaScript Standard Style and Prettier
+:content: |-
+  [JavaScript Standard Style](https://standardjs.com) and [Prettier](https://prettier.io) JavaScript code formatting and style.
+
+  Prettier can be configured to omit semicolons and use single quote marks to meet Standard's requirements. This project uses [`.prettier.json`](https://github.com/michrome/j4e/blob/d72c63d0708071d0ca89e4ba14a92f60ab16e7b3/.prettierrc.json) to make that configuration.
