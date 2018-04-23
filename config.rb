@@ -46,12 +46,11 @@ page "/*.txt", layout: false
 # end
 
 activate :contentful do |f|
-  f.space = {j4e: "vye3iajoufds"}
-  f.access_token = "c94049eb430e0f852812adce24391b86723f44efef6e203e508b11e8f070ea11"
-  # f.cda_query     = QUERY
-  # f.content_types = CONTENT_TYPES_MAPPINGS
-  f.cda_query = {content_type: "post", include: 1}
-  f.content_types = {posts: "post"}
+  f.space = {willowtree: "e3yk46djt0o5"}
+  f.access_token = "ba4951e8a62ac32ea80edcd0655aadb2e8bcd5656ef15a82aae6cdd290c88925"
+  #f.cda_query = {content_type: "dateForYourDiary", include: 1}
+  f.content_types = {diaryDates: "dateForYourDiary", school: "school"}
+  #f.content_types = {product: "product", brand: "brand", category: "category"}
 end
 
 activate :livereload
