@@ -16,6 +16,12 @@ title: Welcome to Middleman
   Middleman is Running
 </h1>
 
+<ul>
+<% data.j4e.posts.each do |id, post| %>
+  <li>'<%= post["title"] %>'</li>
+<% end %>
+</ul>
+
 <%= link_to(
   "Read Documentation",
   "https://middlemanapp.com/basics/templating_language/",

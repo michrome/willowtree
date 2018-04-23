@@ -9,9 +9,9 @@ end
 # https://middlemanapp.com/basics/layouts/
 
 # Per-page layout changes
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+page "/*.xml", layout: false
+page "/*.json", layout: false
+page "/*.txt", layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -46,12 +46,12 @@ page '/*.txt', layout: false
 # end
 
 activate :contentful do |f|
-  f.space         = {partners: 'vye3iajoufds'}
-  f.access_token  = 'c94049eb430e0f852812adce24391b86723f44efef6e203e508b11e8f070ea11'
+  f.space = {j4e: "vye3iajoufds"}
+  f.access_token = "c94049eb430e0f852812adce24391b86723f44efef6e203e508b11e8f070ea11"
   # f.cda_query     = QUERY
   # f.content_types = CONTENT_TYPES_MAPPINGS
-  f.cda_query     = { content_type: 'post', include: 1 }
-  f.content_types = { partner: 'post'}
+  f.cda_query = {content_type: "post", include: 1}
+  f.content_types = {posts: "post"}
 end
 
 activate :livereload
