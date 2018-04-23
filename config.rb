@@ -53,3 +53,5 @@ activate :contentful do |f|
   f.cda_query     = { content_type: 'post', include: 1 }
   f.content_types = { partner: 'post'}
 end
+
+activate :livereload
