@@ -1,3 +1,5 @@
+require 'dotenv/load'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -46,11 +48,9 @@ page "/*.txt", layout: false
 # end
 
 activate :contentful do |f|
-  f.space = {willowtree: "e3yk46djt0o5"}
-  f.access_token = "ba4951e8a62ac32ea80edcd0655aadb2e8bcd5656ef15a82aae6cdd290c88925"
-  #f.cda_query = {content_type: "dateForYourDiary", include: 1}
+  f.space = {willowtree: ENV["CONTENTFUL_SPACE"]}
+  f.access_token = ENV["CONTENTFUL_ACCESS_TOKEN"]
   f.content_types = {diaryDates: "dateForYourDiary", school: "school"}
-  #f.content_types = {product: "product", brand: "brand", category: "category"}
 end
 
 activate :livereload
