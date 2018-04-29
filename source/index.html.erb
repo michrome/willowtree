@@ -11,8 +11,4 @@ title: Welcome to Middleman
 <% data.willowtree.diaryDates.each do |id, diaryDate| %>
   <li><%= diaryDate["description"] %></li>
 <% end %>
-<% data.willowtree.school.each do |id, diaryDate| %>
-  <li><%= diaryDate["name"] %></li>
-<% end %>
-<%= data.willowtree.school.first[1].name %>
 </ul>

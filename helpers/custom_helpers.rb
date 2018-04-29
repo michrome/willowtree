@@ -1,6 +1,14 @@
 require "contentful"
 
 module CustomHelpers
+  def date_human(date = Date.today)
+    date.day.ordinalize + date.strftime(" %B %Y")
+  end
+
+  def date_iso(date = Date.today)
+    date.strftime("%F")
+  end
+
   def locale
     @@locale ||= begin
       puts "Setting locale"

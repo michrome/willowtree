@@ -6,7 +6,8 @@
 </head>
 <body>
   <%= yield %>
-  <%= Date.today %>
-  <%= Time.now %>
+  <footer>
+    Updated <time datetime="<%= date_iso -%>"><%= date_human -%></time>.
+  </footer>
 </body>
 </html>
