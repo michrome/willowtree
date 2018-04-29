@@ -2,9 +2,11 @@
 <html lang="<%= locale -%>">
 <head>
   <meta charset="utf-8">
-  <title><%= data.willowtree.school.first[1].name %></title>
+  <title><%= school.name %></title>
 </head>
 <body>
   <%= yield %>
+  <%= Date.today %>
+  <%= Time.now %>
 </body>
 </html>
