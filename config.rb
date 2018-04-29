@@ -1,5 +1,4 @@
 require "dotenv/load"
-require "lib/default_locale"
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -55,4 +54,3 @@ activate :contentful do |f|
 end
 
 activate :livereload
-activate :default_locale
