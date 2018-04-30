@@ -11,3 +11,4 @@ client.assets.each do |asset|
   FileUtils.mkdir_p(directory) unless File.exists?(directory)
   IO.copy_stream(download, directory_and_file)
 end
+puts Dir.pwd
