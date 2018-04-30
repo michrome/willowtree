@@ -1,3 +1,5 @@
+require "lib/grab_images"
+  
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -52,3 +54,4 @@ activate :contentful do |f|
 end
 
 activate :livereload
+activate :grab_images
