@@ -1,4 +1,3 @@
-require "dotenv/load"
 require "contentful"
 require "open-uri"
 client = Contentful::Client.new(
