@@ -1,14 +1,6 @@
 require "contentful"
 
-module CustomHelpers
-  def date_human(date = Date.today)
-    date.day.ordinalize + date.strftime(" %B %Y")
-  end
-
-  def date_iso(date = Date.today)
-    date.strftime("%F")
-  end
-
+module ContentfulHelpers
   def locale
     @@locale ||= begin
       puts "Setting locale"
@@ -20,7 +12,17 @@ module CustomHelpers
     end
   end
 
+  def diaryDates
+    contentful_data.diaryDates
+  end
+
   def school
-    data.willowtree.school.first[1]
+    contentful_data.school.first[1]
+  end
+
+  private
+
+  def contentful_data
+    data.send(ENV["CONTENTFUL_SPACE"])
   end
 end

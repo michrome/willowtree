@@ -8,7 +8,7 @@ title: Welcome to Middleman
 </h1>
 
 <ul>
-<% data.willowtree.diaryDates.each do |id, diaryDate| %>
-  <li><%= diaryDate["description"] %></li>
+<% diaryDates.each do |id, diaryDate| %>
+  <li><%= diaryDate.description %></li>
 <% end %>
 </ul>

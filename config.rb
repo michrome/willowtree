@@ -48,7 +48,7 @@ page "/*.txt", layout: false
 # end
 
 activate :contentful do |f|
-  f.space = {willowtree: ENV["CONTENTFUL_SPACE"]}
+  f.space = Hash[ENV["CONTENTFUL_SPACE"], ENV["CONTENTFUL_SPACE"]]
   f.access_token = ENV["CONTENTFUL_ACCESS_TOKEN"]
   f.content_types = {diaryDates: "dateForYourDiary", school: "school"}
 end
