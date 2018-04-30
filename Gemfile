@@ -8,3 +8,4 @@ gem 'contentful_middleman'
 gem 'middleman-livereload', '~> 3.4.3'
 gem 'rufo'
 gem 'contentful'
+gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"

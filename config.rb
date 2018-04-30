@@ -55,3 +55,4 @@ end
 
 activate :livereload
 activate :grab_images
+activate :imageoptim
