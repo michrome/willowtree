@@ -11,6 +11,7 @@ class GrabImages < Middleman::Extension
       space: ENV["CONTENTFUL_SPACE"],
       access_token: ENV["CONTENTFUL_ACCESS_TOKEN"],
     )
+    puts "Grabbing images"
     client.assets.each do |asset|
       download = open("https:" + asset.image_url)
       directory_and_file = "source/images#{download.base_uri.path}"

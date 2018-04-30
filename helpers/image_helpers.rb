@@ -1,6 +1,6 @@
 module ImageHelpers
-  def local_img(url)
-    uri = URI.parse(url)
-    "images#{uri.path}"
+  def contentful_image_path(path)
+    path.slice!("//images.ctfassets.net/")
+    image_path path
   end
 end
