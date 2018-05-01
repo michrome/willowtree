@@ -60,3 +60,6 @@ activate :imageoptim
 import_file File.expand_path("_headers", config[:source]), "/_headers"
 
 config[:host] = ENV['HOST'] || "http://127.0.0.1:4567"
+set :url_root, config[:host]
+
+activate :search_engine_sitemap

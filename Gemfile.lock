@@ -22,6 +22,7 @@ GEM
     autoprefixer-rails (8.4.1)
       execjs
     backports (3.11.3)
+    builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -125,6 +126,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-search_engine_sitemap (1.4.0)
+      builder
+      middleman-core (~> 4.0)
     minitest (5.11.3)
     multi_json (1.13.1)
     padrino-helpers (0.13.3.4)
@@ -167,6 +171,7 @@ DEPENDENCIES
   middleman-autoprefixer (~> 2.7)
   middleman-imageoptim!
   middleman-livereload (~> 3.4.3)
+  middleman-search_engine_sitemap
   rufo
   tzinfo-data
   wdm (~> 0.1)
