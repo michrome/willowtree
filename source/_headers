@@ -1,2 +1,5 @@
 /*
-  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+/images/*
+  cache-control: public, max-age=3600
