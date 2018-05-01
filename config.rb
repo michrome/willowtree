@@ -58,3 +58,5 @@ activate :grab_images
 activate :imageoptim
 
 import_file File.expand_path("_headers", config[:source]), "/_headers"
+
+config[:host] = ENV['HOST'] || "http://127.0.0.1:4567"
