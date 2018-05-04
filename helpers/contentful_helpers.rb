@@ -12,8 +12,8 @@ module ContentfulHelpers
     end
   end
 
-  def diaryDates
-    contentful_data.diaryDates
+  def diary_dates
+    contentful_data.diary_dates
   end
 
   def school
