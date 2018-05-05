@@ -50,7 +50,7 @@ page "/*.txt", layout: false
 activate :contentful do |f|
   f.space = Hash[ENV["CONTENTFUL_SPACE"], ENV["CONTENTFUL_SPACE"]]
   f.access_token = ENV["CONTENTFUL_ACCESS_TOKEN"]
-  f.content_types = {diary_dates: "dateForYourDiary", school: "school"}
+  f.content_types = {diary_dates: "dateForYourDiary", school: "school", articles: "article"}
 end
 
 activate :livereload
@@ -59,7 +59,7 @@ activate :imageoptim
 
 import_file File.expand_path("_headers", config[:source]), "/_headers"
 
-config[:host] = ENV['HOST'] || "http://127.0.0.1:4567"
+config[:host] = ENV["HOST"] || "http://127.0.0.1:4567"
 set :url_root, config[:host]
 
 activate :search_engine_sitemap

@@ -12,6 +12,10 @@ module ContentfulHelpers
     end
   end
 
+  def articles
+    contentful_data.articles
+  end
+
   def diary_dates
     contentful_data.diary_dates
   end

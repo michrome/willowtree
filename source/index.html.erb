@@ -13,4 +13,10 @@ title: Welcome to Middleman
 <% end %>
 </ul>
 
+<ul>
+<% articles.each do |id, article| %>
+  <li><%= article.title %></li>
+<% end %>
+</ul>
+
 <%= image_tag(contentful_image_path(school.logo.url), alt: school.logo.title) %>
