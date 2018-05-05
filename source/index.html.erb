@@ -18,10 +18,10 @@ title: Welcome to Middleman
     <%= article.title %>
     <% unless article.pictures.nil? %>
       <% article.pictures.each do |p| %>
-        <%= image_tag(p.url) %>
+        <%= cloudinary_image_tag(p.url, alt: p.title) %>
       <% end %>
     <% end %>
   </div>
 <% end %>
 
-<%= image_tag(school.logo.url, alt: school.logo.title) %>
+<%= cloudinary_image_tag(school.logo.url, alt: school.logo.title) %>
