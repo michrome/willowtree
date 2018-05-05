@@ -1,5 +1,3 @@
-require "lib/grab_images"
-
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -54,8 +52,6 @@ activate :contentful do |f|
 end
 
 activate :livereload
-activate :grab_images
-activate :imageoptim
 
 import_file File.expand_path("_headers", config[:source]), "/_headers"
 
