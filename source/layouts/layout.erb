@@ -4,7 +4,7 @@
   <%= partial "ga" %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title><%= school.name %></title>
+  <title><%= current_page.data.title %> - <%= school.name %></title>
 </head>
 <body>
   <%= yield %>

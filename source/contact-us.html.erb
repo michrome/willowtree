@@ -1,0 +1,51 @@
+---
+title: Contact Us
+---
+
+<h1>Contact Us</h1>
+<h2>Address</h2>
+<address>
+<%= school.legal_name %><br>
+<%= school.street_address %><br>
+<%= school.address_locality %><br>
+<%= school.address_region %><br>
+<%= school.postal_code %>
+</address>
+<h2>Telephone</h2>
+<address>
+<%= school.telephone %>
+</address>
+<h2>Email</h2>
+<address>
+<%= school.email %>
+</address>
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"School",
+  "address":{
+    "@type":"PostalAddress",
+    "addressCountry":"<%= school.address_country %>",
+    "addressLocality":"<%= school.address_locality %>",
+    "addressRegion":"<%= school.address_region %>",
+    "postalCode":"<%= school.postal_code %>",
+    "streetAddress":"<%= school.street_address %>"
+  },
+  "email":"<%= school.email %>",
+  "legalName":"<%= school.legal_name %>",
+  "location":{
+    "@type":"Place",
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":"<%= school.location.lat %>",
+      "longitude":"<%= school.location.lon %>"
+    }
+  },
+  "logo":"<%= cloudinary_image_url(school.logo.url) %>",
+  "telephone":"<%= school.telephone %>",
+  "description":"<%= school.description %>",
+  "name":"<%= school.name %>",
+  "sameAs":"<%= school.same_as %>",
+  "url":"<%= school.url %>"
+}
+</script>
