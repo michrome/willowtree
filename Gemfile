@@ -8,5 +8,5 @@ gem 'contentful'
 gem 'middleman-search_engine_sitemap'
 
 group :development do
-    gem 'rufo'
+  gem 'rufo'
 end
