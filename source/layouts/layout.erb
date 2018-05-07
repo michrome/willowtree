@@ -9,6 +9,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="<%= cloudinary_image_url(school.logo.url, ['w_16']) %>">
   <link rel="apple-touch-icon" sizes="180x180" href="<%= cloudinary_image_url(school.logo.url, ['w_180']) %>">
   <meta name="msapplication-square150x150logo" content="<%= cloudinary_image_url(school.logo.url, ['w_150']) %>">
+  <meta property="og:title" content="<%= current_page.data.title %> - <%= school.name %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= school.url %>" />
+  <meta property="og:image" content="<%= cloudinary_image_url(school.logo.url) %>" />
 </head>
 <body>
   <%= yield %>
