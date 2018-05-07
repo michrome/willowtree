@@ -1,3 +1,5 @@
+require "active_support/core_ext/date/calculations"
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
