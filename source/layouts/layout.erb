@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title><%= current_page.data.title %> - <%= school.name %></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= cloudinary_image_url(school.logo.url, ['w_180']) %>">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= cloudinary_image_url(school.logo.url, ['w_32']) %>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= cloudinary_image_url(school.logo.url, ['w_16']) %>">
 </head>
 <body>
   <%= yield %>
