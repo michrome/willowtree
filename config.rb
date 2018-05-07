@@ -57,4 +57,7 @@ import_file File.expand_path("_headers", config[:source]), "/_headers"
 
 config[:url_root] = ENV["URL_ROOT"] || "http://127.0.0.1:4567"
 
+activate :directory_indexes
+config[:trailing_slash] = false
+
 activate :search_engine_sitemap
