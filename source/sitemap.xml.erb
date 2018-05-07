@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <% sitemap.resources.each do |r| %>
+        <% matches = [
+            /\.css/i,
+            /\.js/i,
+            /\.keep/i,
+            /\.xml/i,
+            /_headers/i,
+            /robots.txt/i,
+            ] %>
+        <% unless matches.any?{|re| re =~ r.url} %>
+            <url>
+                <loc><%= config[:url_root] + r.url %></loc>
+            </url>
+        <% end %>
+    <% end %>
+</urlset>
