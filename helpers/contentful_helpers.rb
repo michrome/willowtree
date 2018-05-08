@@ -20,6 +20,13 @@ module ContentfulHelpers
     contentful_data.diary_dates
   end
 
+  def this_week_diary_dates
+    start_date = Date.today.beginning_of_week(:sunday)
+    end_date = start_date.weeks_since(1)
+    range = start_date..end_date
+    the_dates = diary_dates.select { |_, diary_date| range === diary_date.date }
+  end
+
   def school
     contentful_data.school.first[1]
   end

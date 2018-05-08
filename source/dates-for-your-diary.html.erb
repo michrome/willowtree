@@ -1,3 +1,20 @@
 <%= Date.today.beginning_of_week(:sunday) %>
 <br>
 <%= Date.today.beginning_of_week(:sunday).weeks_since(1) %>
+<br>
+<hr>
+
+<% this_week_diary_dates.each do |_, datey| %>
+    <%= datey.date %>
+    <%= datey.description %>
+    <br>
+<% end %>
+
+<hr>
+
+<% diary_dates.each do |key, datey| %>
+ <%= key %>
+ <%= datey.description %>
+ <%= datey.date %>
+ <br>
+<% end %>
