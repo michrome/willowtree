@@ -1,3 +1,4 @@
+require "active_support/core_ext/date/calculations"
 require "contentful"
 
 module ContentfulHelpers
