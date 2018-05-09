@@ -24,8 +24,8 @@ module ContentfulHelpers
     start_date = Date.today.beginning_of_week(:sunday)
     end_date = start_date.weeks_since(1)
     range = start_date..end_date
-    the_dates = diary_dates.values.select { |diary_date| range === diary_date.date }
-    the_dates.sort_by {|diary_date| diary_date.date }
+    the_dates = diary_dates.select { |_, diary_date| range === diary_date.date }
+    the_dates.sort_by {|_, diary_date| diary_date.date }
   end
 
   def school
