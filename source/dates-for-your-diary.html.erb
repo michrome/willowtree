@@ -4,11 +4,13 @@
 <br>
 <hr>
 
-<% this_week_diary_dates.each do |_, datey| %>
-    <%= datey.date %>
+<% this_week_diary_dates.each do |datey| %>
+    <%= human_date(datey.date) %>
     <%= datey.description %>
     <br>
 <% end %>
+<br>
+
 
 <hr>
 
