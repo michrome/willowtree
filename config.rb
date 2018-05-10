@@ -54,6 +54,7 @@ end
 activate :livereload
 
 import_file File.expand_path("_headers", config[:source]), "/_headers"
+import_file File.expand_path("_redirects", config[:source]), "/_redirects"
 
 config[:url_root] = ENV["URL_ROOT"] || "http://127.0.0.1:4567"
 
