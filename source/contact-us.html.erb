@@ -1,7 +1,12 @@
 ---
 title: Contact Us
 ---
-
+<%= new_school.resource_sets.map('key']).to_s %><br>
+<%= new_school.resource_sets.class.to_s %><br>
+<%= new_school.resource_sets.first[1]['key'].to_s %><br>
+<%= new_school.resource_sets.first[1]['resources'].first['key'].to_s %><br>
+<%= new_school.resource_sets.first[1]['resources'].first['key'].to_s %><br>
+<%= new_school.resource_sets.first[1]['resources'].first['value'].to_s %><br>
 <h1>Contact Us</h1>
 <h2>Address</h2>
 <address>
@@ -33,7 +38,7 @@ title: Contact Us
   },
   "email":"<%= school.email %>",
   "legalName":"<%= school.legal_name %>",
-  "location":{
+  "location":{ 
     "@type":"Place",
     "geo":{
       "@type":"GeoCoordinates",

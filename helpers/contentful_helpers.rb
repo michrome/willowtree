@@ -31,6 +31,10 @@ module ContentfulHelpers
     contentful_data.school.first[1]
   end
 
+  def new_school
+    contentful_data
+  end
+
   private
 
   def contentful_data
