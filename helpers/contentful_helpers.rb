@@ -31,13 +31,28 @@ module ContentfulHelpers
     contentful_data.school.first[1]
   end
 
-  def new_school
-    contentful_data
+  def resource_set(set_name)
+    result = Hash.new
+    sets = contentful_data["resource_sets"]
+    set = resource_sets.select { |_, resource_set| resource_set.name = set_name }.first
+    resources = set[1]["resources"]
+    resources.each do |resource|
+      result[resource.name] = resource.value
+    end
+    result
   end
 
   private
 
   def contentful_data
-    data.send(ENV["CONTENTFUL_SPACE"])
+    # Returns a Hash of the content types synced by middleman contentful so:
+    # contentful_data['content_type'] returns a Hash of entries of that content type
+    # contentful_data['content_type'].first returns a two element Array
+    # contentful_data['content_type'].first.first returns the ID of the entry
+    # contentful_data['content_type'].first.last returns the entry as a Hash
+    # contentful_data['content_type'].first.last.first is a two element Array
+    # contentful_data['content_type'].first.last.first.first is the field name
+    # contentful_data['content_type'].first.last.first.last is the field value
+    data.send(ENV["CONTENTFUL_SPACE"]) # A Hash
   end
 end

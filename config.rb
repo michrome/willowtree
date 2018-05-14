@@ -50,7 +50,7 @@ page "/*.txt", layout: false
 activate :contentful do |f|
   f.space = Hash[ENV["CONTENTFUL_SPACE"], ENV["CONTENTFUL_SPACE"]]
   f.access_token = ENV["CONTENTFUL_ACCESS_TOKEN"]
-  f.content_types = {diary_dates: "dateForYourDiary", school: "school", articles: "article", resources: "resource", resource_sets: "resourceSet"}
+  f.content_types = {diary_dates: "dateForYourDiary", school: "school", articles: "article", resource_sets: "resourceSet"}
 end
 
 activate :livereload
