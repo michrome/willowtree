@@ -12,6 +12,14 @@ module ContentfulHelpers
     end
   end
 
+  def contentful_image_url(id)
+    client = Contentful::Client.new(
+      space: ENV["CONTENTFUL_SPACE"],
+      access_token: ENV["CONTENTFUL_ACCESS_TOKEN"],
+    )
+    image = client.asset(id).image_url
+  end
+
   def articles
     contentful_data.articles
   end

@@ -41,7 +41,7 @@ title: Contact Us
       "longitude":"<%= school2['longitude'] %>"
     }
   },
-  "logo":"<%= cloudinary_image_url(school.logo.url) %>",
+  "logo":"<%= cloudinary_image_url(contentful_image_url(school2['logoID'])) %>",
   "telephone":"<%= school2['telephone'] %>",
   "description":"<%= school2['description'] %>",
   "name":"<%= school2['name'] %>",
