@@ -50,6 +50,26 @@ module ContentfulHelpers
     result
   end
 
+  def school_resource_set
+    resource_set("school")
+  end
+
+  def site_resource_set
+    resource_set("site")
+  end
+
+  def school_logo_url(options = {})
+    cloudinary_image_url(contentful_image_url(school_resource_set["logoID"]), options)
+  end
+
+  def page_title(title = nil)
+    if title.blank?
+      site_resource_set["name"]
+    else
+      "#{title} - #{site_resource_set["name"]}"
+    end
+  end
+
   private
 
   def contentful_data

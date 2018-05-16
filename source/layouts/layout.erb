@@ -4,15 +4,13 @@
   <%= partial "ga" %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title><%= current_page.data.title %> - <%= school.name %></title>
-  <link rel="icon" type="image/png" sizes="32x32" href="<%= cloudinary_image_url(school.logo.url, ['w_32']) %>">
+  <title><%= page_title(current_page.data.title) %></title>
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= school_logo_url(['w_32']) %>">
   <link rel="icon" type="image/png" sizes="16x16" href="<%= cloudinary_image_url(school.logo.url, ['w_16']) %>">
   <link rel="apple-touch-icon" sizes="180x180" href="<%= cloudinary_image_url(school.logo.url, ['w_180']) %>">
   <meta name="msapplication-square150x150logo" content="<%= cloudinary_image_url(school.logo.url, ['w_150']) %>">
-  <meta property="og:title" content="<%= current_page.data.title %> - <%= school.name %>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="<%= school.url %>" />
-  <meta property="og:image" content="<%= cloudinary_image_url(school.logo.url) %>" />
+  <meta property="og:title" content="<%= page_title(current_page.data.title) %>">
+  <meta property="og:image" content="<%= school_logo_url %>">
 </head>
 <body>
   <%= yield %>
