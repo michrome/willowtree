@@ -3,22 +3,22 @@ title: Contact Us
 ---
 <% school2 = resource_set('school') %>
 <h1><%= current_page.data.title %></h1>
-<h2>Address</h2>
-<address>
-<%= school2["legal_name"] %><br>
-<%= school2["address"] %><br>
-<%= school2["town"] %><br>
-<%= school2["county"] %><br>
-<%= school2["postcode"] %>
-</address>
-<h2>Telephone</h2>
-<address>
-<%= school2["telephone"] %>
-</address>
-<h2>Email</h2>
-<address>
-<%= school2["email"] %>
-</address>
+  <h2>Address</h2>
+  <address>
+    <%= school2["legal_name"] %><br>
+    <%= school2["address"] %><br>
+    <%= school2["town"] %><br>
+    <%= school2["county"] %><br>
+    <%= school2["postcode"] %>
+  </address>
+  <h2>Telephone</h2>
+  <address>
+    <%= school2["telephone"] %>
+  </address>
+  <h2>Email</h2>
+  <address>
+    <%= school2["email"] %>
+  </address>
 <script type="application/ld+json">
 {
   "@context":"http://schema.org",
