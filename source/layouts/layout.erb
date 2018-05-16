@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="<%= site_resource_set['lang'] %>">
+<html lang="<%= site['lang'] %>">
 <head>
   <%= partial "ga" %>
-  <meta charset="<%= site_resource_set['charset'] %>">
-  <meta name="viewport" content="site_resource_set['viewport']">
+  <meta charset="<%= site['charset'] %>">
+  <meta name="viewport" content="site['viewport']">
   <title><%= page_title(current_page.data.title) %></title>
   <link rel="icon" type="image/png" sizes="32x32" href="<%= school_logo_url(['w_32']) %>">
   <link rel="icon" type="image/png" sizes="16x16" href="<%= school_logo_url(['w_16']) %>">

@@ -47,7 +47,7 @@ module ContentfulHelpers
     resource_set("school")
   end
 
-  def site_resource_set
+  def site
     resource_set("site")
   end
 
@@ -60,9 +60,9 @@ module ContentfulHelpers
 
   def page_title(title = nil)
     if title.blank?
-      site_resource_set["name"]
+      site["name"]
     else
-      "#{title} - #{site_resource_set["name"]}"
+      "#{title} - #{site["name"]}"
     end
   end
 
