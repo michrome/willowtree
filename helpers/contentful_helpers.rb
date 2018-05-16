@@ -43,10 +43,6 @@ module ContentfulHelpers
     the_dates = diary_dates.select { |_, diary_date| range === diary_date.date }
   end
 
-  def school
-    contentful_data.school.first[1]
-  end
-
   def resource_set(set_name)
     result = Hash.new
     sets = contentful_data["resource_sets"]
