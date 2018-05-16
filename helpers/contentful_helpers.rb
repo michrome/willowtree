@@ -58,7 +58,7 @@ module ContentfulHelpers
     result
   end
 
-  def school_resource_set
+  def school
     resource_set("school")
   end
 
@@ -68,7 +68,7 @@ module ContentfulHelpers
 
   def school_logo_url(cloudinary_options = [])
     cloudinary_image_url(
-      contentful_image_url(school_resource_set["logoID"]),
+      contentful_image_url(school["logoID"]),
       cloudinary_options
     )
   end

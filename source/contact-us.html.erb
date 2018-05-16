@@ -4,19 +4,19 @@ title: Contact Us
 <h1><%= current_page.data.title %></h1>
   <h2>Address</h2>
   <address>
-    <%= school_resource_set['legal_name'] %><br>
-    <%= school_resource_set['address'] %><br>
-    <%= school_resource_set['town'] %><br>
-    <%= school_resource_set['county'] %><br>
-    <%= school_resource_set['postcode'] %>
+    <%= school['legal_name'] %><br>
+    <%= school['address'] %><br>
+    <%= school['town'] %><br>
+    <%= school['county'] %><br>
+    <%= school['postcode'] %>
   </address>
   <h2>Telephone</h2>
   <address>
-    <%= school_resource_set['telephone'] %>
+    <%= school['telephone'] %>
   </address>
   <h2>Email</h2>
   <address>
-    <%= school_resource_set['email'] %>
+    <%= school['email'] %>
   </address>
 <script type="application/ld+json">
 {
@@ -24,27 +24,27 @@ title: Contact Us
   "@type":"School",
   "address":{
     "@type":"PostalAddress",
-    "addressCountry":"<%= school_resource_set['country'] %>",
-    "addressLocality":"<%= school_resource_set['town'] %>",
-    "addressRegion":"<%= school_resource_set['county'] %>",
-    "postalCode":"<%= school_resource_set['postcode'] %>",
-    "streetAddress":"<%= school_resource_set['address'] %>"
+    "addressCountry":"<%= school['country'] %>",
+    "addressLocality":"<%= school['town'] %>",
+    "addressRegion":"<%= school['county'] %>",
+    "postalCode":"<%= school['postcode'] %>",
+    "streetAddress":"<%= school['address'] %>"
   },
-  "email":"<%= school_resource_set['email'] %>",
-  "legalName":"<%= school_resource_set['legalName'] %>",
+  "email":"<%= school['email'] %>",
+  "legalName":"<%= school['legalName'] %>",
   "location":{ 
     "@type":"Place",
     "geo":{
       "@type":"GeoCoordinates",
-      "latitude":"<%= school_resource_set['latitude'] %>",
-      "longitude":"<%= school_resource_set['longitude'] %>"
+      "latitude":"<%= school['latitude'] %>",
+      "longitude":"<%= school['longitude'] %>"
     }
   },
   "logo":"<%= school_logo_url %>",
-  "telephone":"<%= school_resource_set['telephone'] %>",
-  "description":"<%= school_resource_set['description'] %>",
-  "name":"<%= school_resource_set['name'] %>",
-  "sameAs":"<%= school_resource_set['officialWebsite'] %>",
-  "url":"<%= school_resource_set['urlRoot'] %>"
+  "telephone":"<%= school['telephone'] %>",
+  "description":"<%= school['description'] %>",
+  "name":"<%= school['name'] %>",
+  "sameAs":"<%= school['officialWebsite'] %>",
+  "url":"<%= school['urlRoot'] %>"
 }
 </script>
