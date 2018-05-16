@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width">
   <title><%= page_title(current_page.data.title) %></title>
   <link rel="icon" type="image/png" sizes="32x32" href="<%= school_logo_url(['w_32']) %>">
-  <link rel="icon" type="image/png" sizes="16x16" href="<%= cloudinary_image_url(school.logo.url, ['w_16']) %>">
-  <link rel="apple-touch-icon" sizes="180x180" href="<%= cloudinary_image_url(school.logo.url, ['w_180']) %>">
-  <meta name="msapplication-square150x150logo" content="<%= cloudinary_image_url(school.logo.url, ['w_150']) %>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= school_logo_url(['w_16']) %>">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= school_logo_url(['w_180']) %>">
+  <meta name="msapplication-square150x150logo" content="<%= school_logo_url(['w_150']) %>">
   <meta property="og:title" content="<%= page_title(current_page.data.title) %>">
   <meta property="og:image" content="<%= school_logo_url %>">
 </head>

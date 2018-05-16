@@ -20,6 +20,14 @@ module ContentfulHelpers
     image = client.asset(id).image_url
   end
 
+  def contentful_image_title(id)
+    client = Contentful::Client.new(
+      space: ENV["CONTENTFUL_SPACE"],
+      access_token: ENV["CONTENTFUL_ACCESS_TOKEN"],
+    )
+    image = client.asset(id).description
+  end
+
   def articles
     contentful_data.articles
   end
@@ -58,8 +66,11 @@ module ContentfulHelpers
     resource_set("site")
   end
 
-  def school_logo_url(options = {})
-    cloudinary_image_url(contentful_image_url(school_resource_set["logoID"]), options)
+  def school_logo_url(cloudinary_options = [])
+    cloudinary_image_url(
+      contentful_image_url(school_resource_set["logoID"]),
+      cloudinary_options
+    )
   end
 
   def page_title(title = nil)
