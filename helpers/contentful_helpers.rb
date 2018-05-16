@@ -1,17 +1,6 @@
 require "contentful"
 
 module ContentfulHelpers
-  def locale
-    @@locale ||= begin
-      puts "Setting locale"
-      client = Contentful::Client.new(
-        space: ENV["CONTENTFUL_SPACE"],
-        access_token: ENV["CONTENTFUL_ACCESS_TOKEN"],
-      )
-      client.space.locales.find { |e| e.default == true }.code
-    end
-  end
-
   def contentful_image_url(id)
     client = Contentful::Client.new(
       space: ENV["CONTENTFUL_SPACE"],
