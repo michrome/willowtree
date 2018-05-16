@@ -46,10 +46,10 @@ module ContentfulHelpers
   def resource_set(set_name)
     result = Hash.new
     sets = contentful_data["resource_sets"]
-    set = sets.select { |_, resource_set| resource_set.name = set_name }.first
-    resources = set[1]["resources"]
+    set = sets.select { |_, resource_set| resource_set["name"] == set_name }
+    resources = set.values[0]["resources"]
     resources.each do |resource|
-      result[resource.name] = resource.value
+      result[resource["name"]] = resource["value"]
     end
     result
   end
