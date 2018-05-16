@@ -1,3 +1,4 @@
+require "active_support/core_ext/date/calculations"
 require "contentful"
 
 module ContentfulHelpers
@@ -30,6 +31,7 @@ module ContentfulHelpers
     end_date = start_date.weeks_since(1)
     range = start_date..end_date
     the_dates = diary_dates.select { |_, diary_date| range === diary_date.date }
+    the_dates.sort_by {|_, diary_date| diary_date.date }
   end
 
   def resource_set(set_name)

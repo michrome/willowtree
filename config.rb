@@ -1,5 +1,3 @@
-require "active_support/core_ext/date/calculations"
-
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -55,7 +53,8 @@ end
 
 activate :livereload
 
-import_file File.expand_path("_headers", config[:source]), "/_headers"
+import_file File.expand_path("../_headers", __FILE__), "/_headers"
+import_file File.expand_path("../_redirects", __FILE__), "/_redirects"
 
 config[:url_root] = ENV["URL_ROOT"] || "http://127.0.0.1:4567"
 
